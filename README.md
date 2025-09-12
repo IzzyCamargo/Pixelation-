@@ -71,8 +71,6 @@ Clique em "Fazer Download" para exportar sua arte como imagem PNG.
 
 📌 Melhorias futuras
 
-Borracha para apagar pixels.
-
 Suporte a camadas.
 
 Exportar em diferentes resoluções.
