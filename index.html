@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="pixel.css">
+    <title>Pixel Art Area</title>
+</head>
+<body>
+    <header>
+        <h1>PixelArt<i class="bi bi-grid-3x3-gap"></i></h1>
+    </header>
+    
+    <main>
+        <aside>
+            <span class="option-title">Tamanho:</span>
+            <input type="number"class="input-size" min = "4" value="10">
+
+            <span class="option-title">Cor:</span>
+            <input type="color"class="input-color">
+
+            <span class="option-title">Cores usadas:</span>
+            <section class="used-colors">
+
+            </section>
+
+            <button class="button-clear">Limpar Tela</button>
+            
+            <button class="button-eraser">Borracha</button>
+
+            <button class="button-save">Fazer Download</button>
+        
+        </aside>
+        <section class="canvas"></section>
+        <div class="resize"></div>
+    </main>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="pixel.js"></script>
+</html>
