@@ -11,7 +11,7 @@ const MIN_CANVAS_SIZE = 4;
 
 let isPainting = false;
 let isResizing = false;
-let isEraserActive = false; // <<< adicionado para controlar a borracha
+let isEraserActive = false;
 
 const createElement = (tag, className = "") =>{
     const element = document.createElement(tag);
@@ -19,12 +19,12 @@ const createElement = (tag, className = "") =>{
     return element; 
 }
 
-// pintar os pixels (normal)
+
 const setPixelColor = (pixel) =>{
     pixel.style.backgroundColor = inputColor.value;
 }
 
-// pintar pixels considerando borracha OU cor
+
 const setPixelColorWithEraser = (pixel) => {
     if (isEraserActive) {
         pixel.style.backgroundColor = "#444"; // cor padrão do canvas
@@ -34,7 +34,6 @@ const setPixelColorWithEraser = (pixel) => {
 }
 
 // criar Pixels 
-// 🔹 alteração mínima: substituí setPixelColor por setPixelColorWithEraser
 const createPixel = () => {
     const pixel = createElement("div", "pixel");
 
@@ -46,7 +45,7 @@ const createPixel = () => {
     return pixel;
 }
 
-// carregar o canvas 
+
 const loadCanvas = () =>{
     const length = inputSize.value;
     canvas.innerHTML = "";
@@ -104,7 +103,7 @@ const saveCanvas = () =>{
     })
 }
 
-// eventos principais
+
 canvas.addEventListener("mousedown", () => (isPainting = true));
 canvas.addEventListener("mouseup", () => (isPainting = false));
 
@@ -118,21 +117,21 @@ main.addEventListener("mousemove", ({clientX}) => resizeCanvas(clientX));
 
 buttonSave.addEventListener("click", saveCanvas);
 
-// botão "Apagar Canvas" → limpa todos os pixels
+
 const buttonClear = document.querySelector(".button-clear");
 buttonClear.addEventListener("click", () => {
     const pixels = document.querySelectorAll(".pixel");
     pixels.forEach(pixel => {
-        pixel.style.backgroundColor = "#444"; // cor padrão original
+        pixel.style.backgroundColor = "#444"; 
     });
 });
 
-// botão "Borracha" → ativa/desativa modo borracha
+
 const buttonEraser = document.querySelector(".button-eraser");
 buttonEraser.addEventListener("click", () => {
     isEraserActive = !isEraserActive;
     buttonEraser.textContent = isEraserActive ? "Borracha (Ativa)" : "Borracha";
 });
 
-// carrega o canvas inicial
+
 loadCanvas();
