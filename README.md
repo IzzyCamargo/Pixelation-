@@ -3,7 +3,7 @@
 Um editor de Pixel Art feito em HTML, CSS e JavaScript.
 Com ele, você pode criar desenhos pixelados, escolher cores, salvar cores usadas e exportar o resultado em PNG.
 
-🚀 Funcionalidades
+🚀 Funcionalidades:
 
 🖌️ Pintar pixels clicando e arrastando o mouse.
 
